@@ -29,17 +29,20 @@ const readline = require('readline-sync');
 const hasTorch = true;
 const hasMap = false;
 
-console.log("You see two paths: one leads to the mountains, the other to the village.");
-const choice = readline.question("Do you go to the 'mountains' or the 'village'?");
+console.log("You see two paths: one leads to the desert, the other to the town market.");
+const choice = readline.question("Do you go to the 'Desert' or the 'Town Market'?");
 
-if (choice === "mountains" && hasTorch) {
-  console.log("You safely navigate through the dark mountains.");
-} else if (choice === "mountains" && !hasTorch) {
-  console.log("It's too dark to proceed. You decide to turn back.");
-} else if (choice === "village" || hasMap) {
-  console.log("You find your way to the village.");
-} else {
-  console.log("You get lost and wander aimlessly.");
+if (choice === "Desert" && hasTorch) {
+    console.log("You safely navigate through the desert, bypassing enemies.");
+  } else if (choice === "Tower of The Hidden Knights" && !hasTorch) {
+    console.log("You grab your sword and prepare for battle.");
+  } else if (choice === "Market" || hasMap) {
+    console.log("You find your way to the market.");
+  } else {
+    console.log("You acquire potions and herbs.");
+  }
+
+
 }
 
 /* 
